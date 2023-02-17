@@ -12,7 +12,7 @@ RSpec.describe 'Posts show view', type: :system do
       visit user_post_path(@user.id, @post)
     end
 
-    it 'Should have a post titkle' do
+    it 'Should have a post title' do
       expect(page).to have_content(@post.title)
     end
 
@@ -20,15 +20,15 @@ RSpec.describe 'Posts show view', type: :system do
       expect(page).to have_content(@user.name.to_s)
     end
 
-    it 'Should have a post titkle' do
+    it 'Should display comment counter' do
       expect(page).to have_content(@post.comment_counter)
     end
 
-    it 'Should have a post titkle' do
+    it 'Should display likes counter' do
       expect(page).to have_content(@post.likes_counter)
     end
 
-    it 'Should have a post titkle' do
+    it 'Should display post text' do
       expect(page).to have_content(@post.text)
     end
 
