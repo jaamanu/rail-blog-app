@@ -3,7 +3,8 @@ RSpec.describe 'Posts index view', type: :system do
   describe 'Index page' do
     before(:each) do
       @user = User.create(name: 'Kenny',
-                          photo: 'https://img.freepik.com/free-psd/save-world-reusable-grocery-bag-mockup_53876-98827.jpg?', bio: 'Kenny elias')
+                          photo: 'https://img.freepik.com/free-psd/save-world-reusable-grocery-bag-mockup_53876-98827.jpg?',
+                          bio: 'Kenny elias')
       @post = Post.create(text: 'ken', title: 'ken', author: @user)
       Comment.create(post: @post, author: @user, text: 'Amazing post Tom')
       Comment.create(post: @post, author: @user, text: 'Awesome post Tom')
